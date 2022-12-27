@@ -1,0 +1,18 @@
+.main-header {
+  min-height: @header-min-height;
+  background-color: @primary-bg;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main-header__logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @tablet-width) {
+    z-index: 1;
+  }
+}
