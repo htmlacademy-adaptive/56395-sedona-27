@@ -1,6 +1,20 @@
-.copyright {
+.copyright__link {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: @primary-text-color;
+
+  &:hover {
+    color: @secondary-bg;
+
+    .copyright__icon path {
+      fill: @secondary-bg;
+    }
+  }
 }
 
+.copyright__icon {
+  margin-left: 10px;
+}
