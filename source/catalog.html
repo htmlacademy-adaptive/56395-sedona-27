@@ -49,65 +49,169 @@
       </div>
     </section>
 
-    <header class="section-header">
-      <h2 class="section-header__title">Фото и видео</h2>
-      <h3 class="section-header__subtitle">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть
-        о политике и экономике.</h3>
-    </header>
-
-
     <section class="gallery">
-      <div class="gallery__photo photo">
-        <img class="photo__image" src="img/photo1" alt="Неродные просторы">
-        <p class="photo__name">Неродные просторы</p>
-        <p class="photo__author">Автор фото: Борис</p>
-        <div class="photo__likes">
-          <svg class="photo__likes-icon" width="23" height="21">
-            <use xlink:href="img/sprite.svg#icon-like"></use>
-          </svg>
-          <span class="photo__likes-number">1350</span>
-        </div>
-      </div>
-      <div class="gallery__photo photo">
-        <img class="photo__image" src="img/photo2" alt="Местная растительность">
-        <p class="photo__name">Местная растительность</p>
-        <p class="photo__author">Автор фото: Сергей</p>
-        <div class="photo__likes">
-          <svg class="photo__likes-icon" width="23" height="21">
-            <use xlink:href="img/sprite.svg#icon-like"></use>
-          </svg>
-          <span class="photo__likes-number">143</span>
-        </div>
-      </div>
-      <div class="gallery__photo photo">
-        <img class="photo__image" src="img/photo3" alt="Дорога на север">
-        <p class="photo__name">Дорога на север</p>
-        <p class="photo__author">Автор фото: Петр</p>
-        <div class="photo__likes">
-          <svg class="photo__likes-icon" width="23" height="21">
-            <use xlink:href="img/sprite.svg#icon-like"></use>
-          </svg>
-          <span class="photo__likes-number">96</span>
-        </div>
-      </div>
-      <div class="gallery__photo photo">
-        <img class="photo__image" src="img/photo4" alt="Мост дьявола">
-        <p class="photo__name">Мост дьявола</p>
-        <p class="photo__author">Автор фото: Антон</p>
-        <div class="photo__likes">
-          <svg class="photo__likes-icon" width="23" height="21">
-            <use xlink:href="img/sprite.svg#icon-like"></use>
-          </svg>
-          <span class="photo__likes-number">254</span>
-        </div>
+      <div class="gallery__wrapper">
+        <header class="section-header">
+          <h2 class="section-header__title">Фото и видео</h2>
+          <h3 class="section-header__subtitle">Не можете решиться на путешествие из-за курса? Фотографии помогут вам
+            забыть о политике и экономике.</h3>
+        </header>
+
+        <ul class="gallery__photos">
+          <li class="gallery__photo photo">
+            <a href="#" class="photo__link">
+              <picture>
+                <source media="(min-width: 1200px)"
+                        srcset="../img/photo-1-desktop@1x.webp 1x, ../img/photo-1-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)"
+                        srcset="../img/photo-1-tablet@1x.webp 1x, ../img/photo-1-tablet@2x.webp 2x">
+                <source srcset="../img/photo-1-mobile@1x.webp 1x, ../img/photo-1-mobile@2x.webp 2x">
+                <source media="(min-width: 1200px)"
+                        srcset="../img/photo-1-desktop@1x.jpg 1x, ../img/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                        srcset="../img/photo-1-tablet@1x.jpg 1x, ../img/photo-1-tablet@2x.jpg 2x">
+                <img class="photo__image" src="../img/photo-1-mobile@1x.jpg"
+                     srcset="../img/photo-1-mobile@2x.jpg 2x"
+                     width="280" height="280" alt="Неродные просторы">
+              </picture>
+            </a>
+            <div class="photo__info">
+              <div class="photo__description">
+                <p class="photo__name">Неродные просторы</p>
+                <p class="photo__author">Автор фото: Борис</p>
+              </div>
+              <div class="photo__likes">
+                <svg class="photo-item__likes-icon" width="23" height="21">
+                  <use href="img/sprite.svg#icon-like"></use>
+                </svg>
+                <span class="photo__likes-number">1350</span>
+              </div>
+            </div>
+          </li>
+          <li class="gallery__photo photo">
+            <a href="#" class="photo__link">
+              <picture class="photo__picture">
+                <source media="(min-width: 1200px)"
+                        srcset="../img/photo-2-desktop@1x.webp 1x, ../img/photo-2-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)"
+                        srcset="../img/photo-2-tablet@1x.webp 1x, ../img/photo-2-tablet@2x.webp 2x">
+                <source srcset="../img/photo-2-mobile@1x.webp 1x, ../img/photo-2-mobile@2x.webp 2x">
+                <source media="(min-width: 1200px)"
+                        srcset="../img/photo-2-desktop@1x.jpg 1x, ../img/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                        srcset="../img/photo-2-tablet@1x.jpg 1x, ../img/photo-2-tablet@2x.jpg 2x">
+                <img class="photo__image" src="../img/photo-2-mobile@1x.jpg"
+                     srcset="../img/photo-2-mobile@2x.jpg 2x"
+                     width="280" height="280" alt="Местная растительность">
+              </picture>
+            </a>
+            <div class="photo__info">
+              <div class="photo__description">
+                <p class="photo__name">Местная растительность</p>
+                <p class="photo__author">Автор фото: Сергей</p>
+              </div>
+              <div class="photo__likes">
+                <svg class="photo__likes-icon" width="23" height="21">
+                  <use xlink:href="img/sprite.svg#icon-like"></use>
+                </svg>
+                <span class="photo__likes-number">143</span>
+              </div>
+            </div>
+          </li>
+          <li class="gallery__photo photo">
+            <a href="#" class="photo__link">
+              <picture class="photo__picture">
+                <source media="(min-width: 1200px)"
+                        srcset="../img/photo-3-desktop@1x.webp 1x, ../img/photo-3-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)"
+                        srcset="../img/photo-3-tablet@1x.webp 1x, ../img/photo-3-tablet@2x.webp 2x">
+                <source srcset="../img/photo-3-mobile@1x.webp 1x, ../img/photo-3-mobile@2x.webp 2x">
+                <source media="(min-width: 1200px)"
+                        srcset="../img/photo-3-desktop@1x.jpg 1x, ../img/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                        srcset="../img/photo-3-tablet@1x.jpg 1x, ../img/photo-3-tablet@2x.jpg 2x">
+                <img class="photo__image" src="../img/photo-3-mobile@1x.jpg"
+                     srcset="../img/photo-3-mobile@2x.jpg 2x"
+                     width="280" height="280" alt="Дорога на север">
+              </picture>
+            </a>
+            <div class="photo__info">
+              <div class="photo__description">
+                <p class="photo__name">Дорога на север</p>
+                <p class="photo__author">Автор фото: Петр</p>
+              </div>
+              <div class="photo__likes">
+                <svg class="photo__likes-icon" width="23" height="21">
+                  <use xlink:href="img/sprite.svg#icon-like"></use>
+                </svg>
+                <span class="photo__likes-number">96</span>
+              </div>
+            </div>
+          </li>
+          <li class="gallery__photo photo">
+            <a href="#" class="photo__link">
+              <picture class="photo__picture">
+                <source media="(min-width: 1200px)"
+                        srcset="../img/photo-4-desktop@1x.webp 1x, ../img/photo-4-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)"
+                        srcset="../img/photo-4-tablet@1x.webp 1x, ../img/photo-4-tablet@2x.webp 2x">
+                <source srcset="../img/photo-4-mobile@1x.webp 1x, ../img/photo-4-mobile@2x.webp 2x">
+                <source media="(min-width: 1200px)"
+                        srcset="../img/photo-4-desktop@1x.jpg 1x, ../img/photo-4-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                        srcset="../img/photo-4-tablet@1x.jpg 1x, ../img/photo-4-tablet@2x.jpg 2x">
+                <img class="photo__image" src="../img/photo-4-mobile@1x.jpg"
+                     srcset="../img/photo-4-mobile@2x.jpg 2x"
+                     width="280" height="280" alt="Мост дьявола">
+              </picture>
+            </a>
+            <div class="photo__info">
+              <div class="photo__description">
+                <p class="photo__name">Мост дьявола</p>
+                <p class="photo__author">Автор фото: Антон</p>
+              </div>
+              <div class="photo__likes">
+                <svg class="photo__likes-icon" width="23" height="21">
+                  <use xlink:href="img/sprite.svg#icon-like"></use>
+                </svg>
+                <span class="photo__likes-number">254</span>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
+
     <section class="video">
-      <h2 class="video__title title">Все еще сомневаетесь?</h2>
-      <h3 class="video__subtitle subtitle">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
-        очередной раз!</h3>
-      <video width="280" height="177" controls="controls" poster="img/video.jpg"></video>
+      <div class="content-wrapper">
+        <header class="section-header section-header--in-content-wrapper">
+          <h2 class="section-header__title">Все еще сомневаетесь?</h2>
+          <h3 class="section-header__subtitle">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
+            очередной раз!</h3>
+        </header>
+        <div class="video__wrapper">
+          <picture>
+            <source media="(min-width: 1200px)"
+                    srcset="../img/video-desktop@1x.webp 1x, ../img/video-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)"
+                    srcset="../img/video-tablet@1x.webp 1x, ../img/video-tablet@2x.webp 2x">
+            <source srcset="../img/video-mobile@1x.webp 1x, ../img/video-mobile@2x.webp 2x">
+            <source media="(min-width: 1200px)"
+                    srcset="../img/video-desktop@1x.jpg 1x, ../img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+                    srcset="../img/video-tablet@1x.jpg 1x, ../img/video-tablet@2x.jpg 2x">
+            <img class="video__image" src="../img/video-mobile@1x.jpg"
+                 srcset="../img/video-mobile@2x.jpg 2x"
+                 width="280" height="177" alt="Видео">
+          </picture>
+          <button class="video__button" type="button">
+            <svg width="48" height="54">
+              <use xlink:href="img/sprite.svg#icon-video"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </section>
   </main>
 
