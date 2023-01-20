@@ -2,7 +2,7 @@
   display: block;
   padding-top: 20px;
   padding-bottom: 20px;
-  max-width: 458px;
+  width: 100%;
   font-size: 18px;
   line-height: 18px;
   font-family: @bold-primary-font;
@@ -12,8 +12,17 @@
   text-decoration: none;
   background-color: @secondary-bg;
   border: 0;
+  cursor: pointer;
 
   &:hover {
     background-color: @hover-bg;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: 324px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 384px;
   }
 }

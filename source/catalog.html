@@ -2,125 +2,148 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sedona</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page__body">
 
-<header class="main-header">
-  <a href="/" class="main-header__logo">
-    <img class="main-header__logo-image" src="img/logo.svg" alt="Логотип Sedona" width="185" height="96">
-  </a>
-  <nav class="main-nav">
-    <button class="main-nav__toggle" type="button">
-      <span class="visually-hidden">Открыть меню</span>
-    </button>
-    <ul class="main-nav__list site-list">
-      <li class="site-list__item">
-        <a href="index.html">Главная</a>
-      </li>
-      <li class="site-list__item">
-        <a href="catalog.html">Фото и видео</a>
-      </li>
-      <li class="site-list__item">
-        <a href="form.html">Форма отзыва</a>
-      </li>
-      <li class="site-list__item">
-        <a href="https://htmlacademy.ru" target="_blank">HTML Academy</a>
-      </li>
-    </ul>
-  </nav>
-</header>
+<div class="main-wrapper">
+  <header class="main-header">
+    <a href="index.html" class="main-header__logo">
+      <img class="main-header__logo-image" src="img/logo.svg" alt="Логотип Sedona" width="185" height="96">
+    </a>
+    <nav class="main-nav main-nav--closed">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <ul class="main-nav__list">
+        <li class="main-nav__list-item">
+          <a class="main-nav__list-link active" href="index.html">Главная</a>
+        </li>
+        <li class="main-nav__list-item">
+          <a class="main-nav__list-link" href="catalog.html">Фото и видео</a>
+        </li>
+        <li class="main-nav__list-item main-nav__list-item--spacer"></li>
+        <li class="main-nav__list-item">
+          <a class="main-nav__list-link" href="form.html">Форма отзыва</a>
+        </li>
+        <li class="main-nav__list-item">
+          <a class="main-nav__list-link" href="https://htmlacademy.ru" target="_blank">HTML Academy</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-<main class="main-container">
-  <h1 class="visually-hidden">Галерея фото и видео</h1>
+  <main class="main-container">
+    <h1 class="visually-hidden">Галерея фото и видео</h1>
 
-  <section class="intro">
-    <img class="intro__image intro__image--small" src="img/intro-small.jpg" alt="Виды Седоны">
+    <section class="intro intro--sedona">
+      <div class="intro__wrapper">
+        <img class="intro__text-image intro__text-image--sedona" src="../img/text-sedona.svg" width="229" height="39"
+             alt="Седона">
+      </div>
+    </section>
+
     <header class="section-header">
       <h2 class="section-header__title">Фото и видео</h2>
       <h3 class="section-header__subtitle">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть
         о политике и экономике.</h3>
     </header>
-  </section>
 
-  <section class="gallery">
-    <div class="gallery__photo photo">
-      <img class="photo__image" src="img/photo1" alt="Неродные просторы">
-      <p class="photo__name">Неродные просторы</p>
-      <p class="photo__author">Автор фото: Борис</p>
-      <div class="photo__likes">
-        <svg class="photo__likes-icon" width="23" height="21">
-          <use xlink:href="img/sprite.svg#icon-like"></use>
-        </svg>
-        <span class="photo__likes-number">1350</span>
-      </div>
-    </div>
-    <div class="gallery__photo photo">
-      <img class="photo__image" src="img/photo2" alt="Местная растительность">
-      <p class="photo__name">Местная растительность</p>
-      <p class="photo__author">Автор фото: Сергей</p>
-      <div class="photo__likes">
-        <svg class="photo__likes-icon" width="23" height="21">
-          <use xlink:href="img/sprite.svg#icon-like"></use>
-        </svg>
-        <span class="photo__likes-number">143</span>
-      </div>
-    </div>
-    <div class="gallery__photo photo">
-      <img class="photo__image" src="img/photo3" alt="Дорога на север">
-      <p class="photo__name">Дорога на север</p>
-      <p class="photo__author">Автор фото: Петр</p>
-      <div class="photo__likes">
-        <svg class="photo__likes-icon" width="23" height="21">
-          <use xlink:href="img/sprite.svg#icon-like"></use>
-        </svg>
-        <span class="photo__likes-number">96</span>
-      </div>
-    </div>
-    <div class="gallery__photo photo">
-      <img class="photo__image" src="img/photo4" alt="Мост дьявола">
-      <p class="photo__name">Мост дьявола</p>
-      <p class="photo__author">Автор фото: Антон</p>
-      <div class="photo__likes">
-        <svg class="photo__likes-icon" width="23" height="21">
-          <use xlink:href="img/sprite.svg#icon-like"></use>
-        </svg>
-        <span class="photo__likes-number">254</span>
-      </div>
-    </div>
-  </section>
 
-  <section class="video">
-    <h2 class="video__title title">Все еще сомневаетесь?</h2>
-    <h3 class="video__subtitle subtitle">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
-      очередной раз!</h3>
-    <video width="280" height="177" controls="controls" poster="img/video.jpg"></video>
-  </section>
-</main>
+    <section class="gallery">
+      <div class="gallery__photo photo">
+        <img class="photo__image" src="img/photo1" alt="Неродные просторы">
+        <p class="photo__name">Неродные просторы</p>
+        <p class="photo__author">Автор фото: Борис</p>
+        <div class="photo__likes">
+          <svg class="photo__likes-icon" width="23" height="21">
+            <use xlink:href="img/sprite.svg#icon-like"></use>
+          </svg>
+          <span class="photo__likes-number">1350</span>
+        </div>
+      </div>
+      <div class="gallery__photo photo">
+        <img class="photo__image" src="img/photo2" alt="Местная растительность">
+        <p class="photo__name">Местная растительность</p>
+        <p class="photo__author">Автор фото: Сергей</p>
+        <div class="photo__likes">
+          <svg class="photo__likes-icon" width="23" height="21">
+            <use xlink:href="img/sprite.svg#icon-like"></use>
+          </svg>
+          <span class="photo__likes-number">143</span>
+        </div>
+      </div>
+      <div class="gallery__photo photo">
+        <img class="photo__image" src="img/photo3" alt="Дорога на север">
+        <p class="photo__name">Дорога на север</p>
+        <p class="photo__author">Автор фото: Петр</p>
+        <div class="photo__likes">
+          <svg class="photo__likes-icon" width="23" height="21">
+            <use xlink:href="img/sprite.svg#icon-like"></use>
+          </svg>
+          <span class="photo__likes-number">96</span>
+        </div>
+      </div>
+      <div class="gallery__photo photo">
+        <img class="photo__image" src="img/photo4" alt="Мост дьявола">
+        <p class="photo__name">Мост дьявола</p>
+        <p class="photo__author">Автор фото: Антон</p>
+        <div class="photo__likes">
+          <svg class="photo__likes-icon" width="23" height="21">
+            <use xlink:href="img/sprite.svg#icon-like"></use>
+          </svg>
+          <span class="photo__likes-number">254</span>
+        </div>
+      </div>
+    </section>
 
-<footer class="main-footer">
-  <p class="main-footer__hashtag">#visitsedona</p>
-  <div class="main-footer__social social">
-    <ul class="social__list">
-      <li class="social__item">
-        <a class="social__link social__link--vkontakte" href="#"></a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--telegram" href="#"></a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--youtube" href="#"></a>
-      </li>
-    </ul>
-  </div>
-  <div class="main-footer__copyright copyright">
-    <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-      <svg class="copyright__icon" width="27" height="34">
-        <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
-      </svg>
-    </a>
-  </div>
-</footer>
+    <section class="video">
+      <h2 class="video__title title">Все еще сомневаетесь?</h2>
+      <h3 class="video__subtitle subtitle">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
+        очередной раз!</h3>
+      <video width="280" height="177" controls="controls" poster="img/video.jpg"></video>
+    </section>
+  </main>
 
+  <footer class="main-footer">
+    <p class="main-footer__hashtag">#visitsedona</p>
+    <div class="main-footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="#">
+            <span class="visually-hidden">Мы в Контакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--telegram" href="#">
+            <span class="visually-hidden">Мы в Telegram</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="#">
+            <span class="visually-hidden">Мы на YouTube</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="main-footer__copyright copyright">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        Разработано
+        <svg class="copyright__icon" width="27" height="35" aria-hidden="true" focusable="false" fill="currentcolor"
+             xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+        </svg>
+      </a>
+    </div>
+  </footer>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>

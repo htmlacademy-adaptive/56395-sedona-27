@@ -1,5 +1,5 @@
 .radio__label {
-  font-weight: 700;
+  font-family: @bold-primary-font;
   font-size: 18px;
   line-height: 26px;
   display: inline-block;
@@ -8,17 +8,15 @@
   padding-top: 11px;
   cursor: pointer;
 
-
   &::before {
     content: "";
-    position: absolute;
     width: 46px;
     height: 46px;
-    display: block;
-    background: #F2F2F2;
-    border-radius: 50%;
     top: 0;
     left: 0;
+    position: absolute;
+    background: #F2F2F2;
+    border-radius: 50%;
   }
 
   &::after {
@@ -26,7 +24,6 @@
     position: absolute;
     width: 16px;
     height: 16px;
-    display: block;
     background: #333333;
     border-radius: 50%;
     top: 15px;
