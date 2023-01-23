@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -17,7 +19,7 @@ img {
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
-  overflow: hidden
+  overflow: hidden;
 }
 
 .mobile-hidden {
@@ -39,7 +41,7 @@ img {
 }
 
 .desktop-hidden {
-    @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     display: none;
   }
 }

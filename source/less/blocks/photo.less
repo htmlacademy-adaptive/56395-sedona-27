@@ -49,11 +49,11 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     color: @secondary-text-color;
+    padding: 18px 25px 21px;
   }
 }
 
 .photo:nth-child(2n+3) .photo__info {
-
   @media (min-width: @tablet-width) {
     background-color: #eaeaea;
   }
@@ -82,6 +82,8 @@
   font-family: @bold-primary-font;
   color: @bold-text-color;
   margin-top: 10px;
+  display: flex;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
@@ -89,12 +91,20 @@
 
   @media (min-width: @desktop-width) {
     color: @secondary-text-color;
+    margin-top: 8px;
+    margin-right: -6px;
   }
 }
 
 .photo__likes-icon {
-  margin-right: 10px;
+  margin: -10px 7px 0 0;
 
+  @media (min-width: @desktop-width) {
+    fill: #ffffff;
+  }
+}
+
+.photo__likes-icon path {
   @media (min-width: @desktop-width) {
     fill: #ffffff;
   }

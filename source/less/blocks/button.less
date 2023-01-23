@@ -1,10 +1,9 @@
 .button {
   display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 18px 10px 18px;
   width: 100%;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 21px;
+  line-height: 26px;
   font-family: @bold-primary-font;
   text-align: center;
   color: @secondary-text-color;
@@ -18,11 +17,20 @@
     background-color: @hover-bg;
   }
 
-  @media (min-width: @tablet-width) {
-    max-width: 324px;
+  &:active {
+    background-color: @active-bg;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.button--disabled {
+  background-color: #e5e5e5;
+
+  &:hover {
+    background-color: #e5e5e5;
   }
 
-  @media (min-width: @desktop-width) {
-    max-width: 384px;
+  &:active {
+    color: #ffffff;
   }
 }

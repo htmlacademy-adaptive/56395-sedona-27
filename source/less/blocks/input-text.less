@@ -7,7 +7,7 @@
 
 .input-text__input {
   width: 100%;
-  padding: 16px;
+  padding: 14px;
   background-color: #f2f2f2;
   font-family: @bold-primary-font;
   font-size: 18px;
@@ -28,16 +28,28 @@
   }
 }
 
-.input-text__input--phone {
-  background-image: url(../img/icon-phone.svg), linear-gradient(to left, #e6e6e6 58px, transparent 58px);
-  background-position: right 20px center, right center;
-  background-repeat: no-repeat;
-  padding-right: 65px;
+.input-text__input--phone,
+.input-text__input--email {
+  width: calc(100% - 58px);
 }
 
-.input-text__input--email {
-  background-image: url(../img/icon-mail.svg), linear-gradient(to left, #e6e6e6 58px, transparent 58px);
-  background-position: right 20px center, right center;
+.input-text__wrapper {
+  position: relative;
+  display: flex;
+}
+
+.input-text__icon {
+  display: block;
+  width: 58px;
+  background-color: #e6e6e6;
+  background-position: center center;
   background-repeat: no-repeat;
-  padding-right: 65px;
+}
+
+.input-text__icon--phone {
+  background-image: url("../img/icon-phone.svg");
+}
+
+.input-text__icon--email {
+  background-image: url("../img/icon-mail.svg");
 }

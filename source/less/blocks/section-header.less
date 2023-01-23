@@ -1,32 +1,46 @@
 .section-header {
-  padding: 40px 20px 30px;
+  padding: 32px 25px 17px;
   text-align: center;
   margin: 0 auto;
   max-width: 458px;
+
+  @media (min-width: @tablet-width) {
+    padding: 49px 0 54px;
+    max-width: 485px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 59px 0 45px;
+  }
 }
 
 .section-header--in-content-wrapper {
-  padding: 40px 0 30px;
+  padding: 0 0 37px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0 89px;
+  }
 }
 
 .section-header__title {
   padding: 0;
-  margin: 0 0 35px;
-  font-size: 18px;
+  margin: 0 0 36px;
+  font-size: 21px;
   line-height: 26px;
   font-family: @bold-primary-font;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    font-size: 21px;
+    font-size: 30px;
+    margin: 0 0 29px;
   }
 }
 
-.section-header__title--booking {
-  font-size: 21px;
+.section-header__title--small {
+  font-size: 18px;
 
   @media (min-width: @tablet-width) {
-    font-size: 30px;
+    font-size: 21px;
   }
 }
 
@@ -37,4 +51,80 @@
   line-height: 21px;
   text-transform: uppercase;
   font-weight: normal;
+}
+
+.section-header--booking {
+  padding: 42px 18px 48px;
+
+  @media (min-width: @tablet-width) {
+    padding: 58px 18px 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 58px 18px 66px;
+  }
+}
+
+.section-header__title--booking {
+  margin: 0 0 21px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 34px;
+  }
+}
+
+.section-header--gallery {
+  padding: 37px 20px 36px;
+
+  @media (min-width: @tablet-width) {
+    padding: 65px 20px 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 100px 20px 88px;
+  }
+}
+
+.section-header__title--gallery {
+  margin: 0 0 26px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 33px;
+  }
+}
+
+.section-header__title--video {
+  margin: 0 0 25px;
+  font-size: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 32px;
+    font-size: 30px;
+  }
+}
+
+.section-header--form {
+  padding: 36px 22px 27px;
+
+  @media (min-width: @tablet-width) {
+    padding: 64px 25px 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 114px 25px 27px;
+  }
+}
+
+.section-header__title--form {
+  font-size: 18px;
+  margin: 0 0 25px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    margin: 0 0 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 33px;
+  }
 }
