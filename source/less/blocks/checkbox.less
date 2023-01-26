@@ -34,8 +34,28 @@
     background-repeat: no-repeat;
     display: none;
   }
+
+  &:hover {
+    &::before {
+      background-color: #e5e5e5;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: #d5d5d5;
+    }
+
+    &::after {
+      background-image: url("../img/icon-tick-active.svg");
+    }
+  }
 }
 
 .checkbox__input:checked + .checkbox__label::after {
   display: block;
+}
+
+.checkbox__input:focus + .checkbox__label::before {
+  border: 2px solid #000000;
 }

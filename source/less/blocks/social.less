@@ -2,9 +2,12 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  width: 155px;
   display: flex;
   justify-content: space-between;
+}
+
+.social__item {
+  margin: 0 3px;
 }
 
 .social__link {
@@ -21,7 +24,7 @@
     background-color: @hover-bg;
   }
 
-  &:active .social-link__icon {
+  &:active .social__icon {
     background-color: @active-bg;
     opacity: 0.3;
   }

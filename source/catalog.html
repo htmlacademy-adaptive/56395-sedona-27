@@ -12,14 +12,14 @@
   <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
-<body class="page__body">
+<body class="page__body page__body--no-js">
 
 <div class="main-wrapper">
   <header class="main-header">
     <a href="index.html" class="main-header__logo">
       <img class="main-header__logo-image" src="img/logo.svg" alt="Логотип Sedona" width="185" height="96">
     </a>
-    <nav class="main-nav main-nav--closed"> <!-- заменить класс .main-nav--closed на .main-nav--nojs для работы меню с отключенным JS-->
+    <nav class="main-nav main-nav--opened">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -30,7 +30,6 @@
         <li class="main-nav__list-item">
           <a class="main-nav__list-link main-nav__list-link--active" href="catalog.html">Фото и видео</a>
         </li>
-        <li class="main-nav__list-item main-nav__list-item--spacer"></li>
         <li class="main-nav__list-item">
           <a class="main-nav__list-link" href="form.html">Форма отзыва</a>
         </li>
@@ -199,7 +198,7 @@
             <img class="video__image" src="../img/video-mobile@1x.jpg" srcset="../img/video-mobile@2x.jpg 2x" width="280" height="177" alt="Видео">
           </picture>
           <button class="video__button" type="button">
-            <p class="visually-hidden">Воспроизвести видео</p>
+            <span class="visually-hidden">Воспроизвести видео</span>
             <svg width="48" height="54">
               <use xlink:href="img/sprite.svg#icon-video"></use>
             </svg>
@@ -216,7 +215,7 @@
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="#">
             <span class="visually-hidden">Мы в Контакте</span>
-            <svg class="social-link__icon" width="24" height="24">
+            <svg class="social__icon" width="24" height="24">
               <use xlink:href="img/sprite.svg#icon-vk"></use>
             </svg>
           </a>
@@ -224,7 +223,7 @@
         <li class="social__item">
           <a class="social__link social__link--telegram" href="#">
             <span class="visually-hidden">Мы в Telegram</span>
-            <svg class="social-link__icon" width="24" height="24">
+            <svg class="social__icon" width="24" height="24">
               <use xlink:href="img/sprite.svg#icon-telegram"></use>
             </svg>
           </a>
@@ -232,7 +231,7 @@
         <li class="social__item">
           <a class="social__link social__link--youtube" href="#">
             <span class="visually-hidden">Мы на YouTube</span>
-            <svg class="social-link__icon" width="24" height="24">
+            <svg class="social__icon" width="24" height="24">
               <use xlink:href="img/sprite.svg#icon-youtube"></use>
             </svg>
           </a>
