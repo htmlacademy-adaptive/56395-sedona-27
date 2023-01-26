@@ -14,3 +14,18 @@
   color: @primary-text-color;
   position: relative;
 }
+
+@media (max-width: @mobile-width-only) {
+  .page__body--no-js .main-nav {
+    position: static;
+    padding-top: 87px;
+  }
+
+  .page__body--no-js .main-nav__toggle {
+    display: none;
+  }
+
+  .page__body--no-js .main-header__logo {
+    z-index: 3;
+  }
+}

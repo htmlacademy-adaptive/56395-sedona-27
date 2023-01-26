@@ -12,14 +12,14 @@
   <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
-<body class="page__body">
+<body class="page__body page__body--no-js">
 
 <div class="main-wrapper">
   <header class="main-header">
     <a href="index.html" class="main-header__logo">
       <img class="main-header__logo-image" src="img/logo.svg" alt="Логотип Sedona" width="185" height="96">
     </a>
-    <nav class="main-nav main-nav--closed"> <!-- заменить класс .main-nav--closed на .main-nav--nojs для работы меню с отключенным JS-->
+    <nav class="main-nav main-nav--opened">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -30,7 +30,6 @@
         <li class="main-nav__list-item">
           <a class="main-nav__list-link" href="catalog.html">Фото и видео</a>
         </li>
-        <li class="main-nav__list-item main-nav__list-item--spacer"></li>
         <li class="main-nav__list-item">
           <a class="main-nav__list-link" href="form.html">Форма отзыва</a>
         </li>
@@ -44,7 +43,7 @@
   <main class="main-container">
     <section class="intro intro--index">
       <h1 class="visually-hidden">Седона - городок в Аризоне</h1>
-      <div class="intro__wrapper">
+      <div class="intro__wrapper intro__wrapper--index">
         <img class="intro__text-image" src="../img/intro-text-index.svg" width="282" height="214" alt="Добро пожаловать в Седону">
       </div>
     </section>
@@ -167,22 +166,24 @@
 
     <section class="map">
       <h2 class="visually-hidden">Карта</h2>
-      <iframe class="map__iframe"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22024.644675989897!2d-111.81009102394202!3d34.85665399771203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1672039445814!5m2!1sru!2sru"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <picture>
-        <source type="image/webp" media="(min-width: 1200px)"
-                srcset="../img/map-desktop@1x.webp 1x, ../img/map-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)"
-                srcset="../img/map-tablet@1x.webp 1x, ../img/map-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="../img/map-mobile@1x.webp 1x, ../img/map-mobile@2x.webp 2x">
-        <source media="(min-width: 1200px)"
-                srcset="../img/map-desktop@1x.jpg 1x, ../img/map-desktop@2x.jpg 2x">
-        <source media="(min-width: 768px)"
-                srcset="../img/map-tablet@1x.jpg 1x, ../img/map-tablet@2x.jpg 2x">
-        <img class="map__image" src="../img/map-mobile@1x.jpg" srcset="../img/map-mobile@2x.jpg 2x" width="320" height="350" alt="Карта Седоны">
-      </picture>
+      <div class="map__wrapper">
+        <picture class="map__picture">
+          <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="../img/map-desktop@1x.webp 1x, ../img/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+                  srcset="../img/map-tablet@1x.webp 1x, ../img/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="../img/map-mobile@1x.webp 1x, ../img/map-mobile@2x.webp 2x">
+          <source media="(min-width: 1200px)"
+                  srcset="../img/map-desktop@1x.jpg 1x, ../img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)"
+                  srcset="../img/map-tablet@1x.jpg 1x, ../img/map-tablet@2x.jpg 2x">
+          <img class="map__image" src="../img/map-mobile@1x.jpg" srcset="../img/map-mobile@2x.jpg 2x" width="320" height="350" alt="Карта Седоны">
+        </picture>
+        <iframe class="map__iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22024.644675989897!2d-111.81009102394202!3d34.85665399771203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1672039445814!5m2!1sru!2sru"
+                width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </section>
   </main>
 
@@ -193,7 +194,7 @@
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="#">
             <span class="visually-hidden">Мы в Контакте</span>
-            <svg class="social-link__icon" width="24" height="24">
+            <svg class="social__icon" width="24" height="24">
               <use xlink:href="img/sprite.svg#icon-vk"></use>
             </svg>
           </a>
@@ -201,7 +202,7 @@
         <li class="social__item">
           <a class="social__link social__link--telegram" href="#">
             <span class="visually-hidden">Мы в Telegram</span>
-            <svg class="social-link__icon" width="24" height="24">
+            <svg class="social__icon" width="24" height="24">
               <use xlink:href="img/sprite.svg#icon-telegram"></use>
             </svg>
           </a>
@@ -209,7 +210,7 @@
         <li class="social__item">
           <a class="social__link social__link--youtube" href="#">
             <span class="visually-hidden">Мы на YouTube</span>
-            <svg class="social-link__icon" width="24" height="24">
+            <svg class="social__icon" width="24" height="24">
               <use xlink:href="img/sprite.svg#icon-youtube"></use>
             </svg>
           </a>
